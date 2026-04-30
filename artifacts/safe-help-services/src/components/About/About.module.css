@@ -129,6 +129,7 @@
 .imagePlaceholder {
   width: 100%;
   aspect-ratio: 4 / 5;
+  min-height: 280px;
   background: linear-gradient(135deg, rgba(4, 44, 83, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
   border: 2px solid rgba(251, 191, 36, 0.3);
   border-radius: var(--radius-lg);
@@ -155,30 +156,48 @@
 
 .yearsCard {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 16px;
+  right: 16px;
   background-color: var(--color-gold);
   color: var(--color-black);
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-md);
   text-align: center;
   box-shadow: var(--shadow-lg);
+  max-width: 110px;
 }
 
 .yearsNumber {
   font-family: var(--font-display);
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 4px;
 }
 
 .yearsText {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   line-height: 1.4;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+@media (min-width: 480px) {
+  .yearsCard {
+    bottom: 20px;
+    right: 20px;
+    padding: var(--space-md) var(--space-lg);
+    max-width: none;
+  }
+
+  .yearsNumber {
+    font-size: 48px;
+  }
+
+  .yearsText {
+    font-size: 12px;
+  }
 }
 
 /* Tablet */
