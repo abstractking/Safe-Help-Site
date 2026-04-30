@@ -346,12 +346,12 @@
 /* Tablet */
 @media (min-width: 768px) {
   .container {
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: 1fr;
     gap: var(--space-2xl);
   }
 
   .characterContainer {
-    display: block;
+    display: none; /* Hide character on tablet to prevent overlap */
   }
 
   .servicesContainer {
@@ -361,6 +361,18 @@
 
   .ctaPhone {
     font-size: 24px;
+  }
+}
+
+/* Desktop - Show character only when there's enough space */
+@media (min-width: 1100px) {
+  .container {
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-2xl);
+  }
+
+  .characterContainer {
+    display: block;
   }
 }
 
