@@ -23,7 +23,7 @@
   gap: var(--space-lg);
 }
 
-@media (min-width: 560px) {
+@media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
