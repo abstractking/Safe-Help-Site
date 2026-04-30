@@ -2,6 +2,7 @@
   position: relative;
   min-height: 100vh;
   padding-top: 80px;
+  padding-bottom: 140px;
   background-color: var(--color-black);
   overflow: hidden;
 }
@@ -21,7 +22,7 @@
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-2xl) var(--space-lg);
+  padding: var(--space-xl) var(--space-md);
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
@@ -111,16 +112,17 @@
   margin: 0;
 }
 
+/* CTA Button — mobile-first smaller size */
 .ctaButton {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   align-self: flex-start;
   background-color: var(--color-gold);
   color: var(--color-black);
-  padding: 20px 40px;
+  padding: 14px 24px;
   border-radius: var(--radius-md);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   transition: all var(--duration-base);
@@ -138,7 +140,7 @@
 }
 
 .ctaLabel {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   opacity: 0.7;
   margin-bottom: 2px;
@@ -146,7 +148,7 @@
 
 .ctaPhone {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
@@ -175,7 +177,9 @@
 /* Character Container */
 .characterContainer {
   position: relative;
-  display: none; /* Hidden on mobile, shown on tablet+ */
+  display: none;
+  overflow: visible;
+  padding-right: 16px;
 }
 
 .character {
@@ -281,11 +285,11 @@
 
 .readyBadge {
   position: absolute;
-  top: -12px;
-  right: -12px;
+  top: -8px;
+  right: 4px;
   background-color: var(--color-blue-darkest);
   color: var(--color-white);
-  padding: 12px 20px;
+  padding: 10px 16px;
   border-radius: var(--radius-md);
   font-size: 13px;
   font-weight: 600;
@@ -308,22 +312,22 @@
 .servicesContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--space-lg);
+  padding: 0 var(--space-md);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
 .serviceCard {
   text-align: center;
   cursor: pointer;
   transition: transform var(--duration-base);
-  padding: var(--space-sm);
+  padding: var(--space-xs);
 }
 
 .serviceIcon {
   color: var(--color-gold);
-  margin: 0 auto 12px;
+  margin: 0 auto 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,7 +335,7 @@
 
 .serviceLabel {
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-gold);
   font-weight: 600;
   margin-bottom: 4px;
@@ -339,15 +343,53 @@
 }
 
 .serviceDesc {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--color-gray-mid);
 }
 
 /* Tablet */
+@media (min-width: 640px) {
+  .ctaButton {
+    padding: 20px 40px;
+    font-size: 20px;
+    gap: 16px;
+  }
+
+  .ctaLabel {
+    font-size: 12px;
+  }
+
+  .ctaPhone {
+    font-size: 24px;
+  }
+
+  .servicesContainer {
+    padding: 0 var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .serviceLabel {
+    font-size: 14px;
+  }
+
+  .serviceDesc {
+    font-size: 12px;
+  }
+
+  .serviceCard {
+    padding: var(--space-sm);
+  }
+}
+
 @media (min-width: 768px) {
+  .hero {
+    padding-bottom: 0;
+  }
+
   .container {
     grid-template-columns: 1fr 320px;
     gap: var(--space-2xl);
+    padding: var(--space-2xl) var(--space-lg);
   }
 
   .characterContainer {
@@ -357,10 +399,6 @@
   .servicesContainer {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
-  }
-
-  .ctaPhone {
-    font-size: 24px;
   }
 }
 
