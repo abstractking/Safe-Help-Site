@@ -1,0 +1,88 @@
+.reviews {
+  padding: var(--space-3xl) 0;
+  background-color: #000000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.title {
+  font-size: clamp(32px, 6vw, 48px);
+  color: var(--color-gold);
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(4, 44, 83, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  color: var(--color-gold);
+  margin-bottom: var(--space-md);
+}
+
+.text {
+  font-size: 16px;
+  color: var(--color-gray-light);
+  line-height: 1.7;
+  margin: 0 0 var(--space-md) 0;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.name {
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 14px;
+}
+
+.date {
+  font-size: 12px;
+  color: var(--color-gray-mid);
+}
+
+.googleBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--color-gray-mid);
+  font-size: 14px;
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: var(--color-gray-mid);
+  padding: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

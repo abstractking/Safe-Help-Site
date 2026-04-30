@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Safe Help Services"
+version = "1.0.0"
+id = "artifacts/safe-help-services"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24823
+
+[services.development]
+run = "pnpm --filter @workspace/safe-help-services run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/safe-help-services", "run", "build" ]
+publicDir = "artifacts/safe-help-services/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24823"
+BASE_PATH = "/"

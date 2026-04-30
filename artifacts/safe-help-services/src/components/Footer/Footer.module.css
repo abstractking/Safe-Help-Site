@@ -1,0 +1,127 @@
+.footer {
+  background-color: #0a0a0a;
+  border-top: 2px solid var(--color-gold);
+  padding: var(--space-2xl) 0 var(--space-lg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 1px;
+}
+
+.logoSubtext {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-gray-mid);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 14px;
+  color: var(--color-gray-mid);
+  margin: 0;
+  max-width: 300px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.linkGroup h3 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--color-gold);
+  margin: 0 0 var(--space-xs) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.linkGroup a {
+  font-size: 14px;
+  color: var(--color-gray-mid);
+  transition: color var(--duration-fast);
+}
+
+.linkGroup a:hover {
+  color: var(--color-gold);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-align: center;
+}
+
+.copyright,
+.attribution {
+  font-size: 12px;
+  color: var(--color-gray-mid);
+  margin: 0;
+}
+
+.attribution a {
+  color: var(--color-gold);
+  font-weight: 600;
+  transition: color var(--duration-fast);
+}
+
+.attribution a:hover {
+  color: var(--color-gold-dark);
+}
+
+@media (min-width: 640px) {
+  .links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .top {
+    grid-template-columns: 1fr 2fr;
+  }
+}
