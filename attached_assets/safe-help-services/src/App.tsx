@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
@@ -10,15 +9,6 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  useEffect(() => {
-    // Smooth scroll polyfill for Safari
-    if (!('scrollBehavior' in document.documentElement.style)) {
-      import('smoothscroll-polyfill').then(smoothscroll => {
-        smoothscroll.polyfill();
-      });
-    }
-  }, []);
-
   return (
     <div className="App">
       <Navbar />
